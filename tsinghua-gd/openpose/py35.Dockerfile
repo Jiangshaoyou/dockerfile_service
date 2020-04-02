@@ -37,6 +37,7 @@ RUN echo "Downloading and building OpenPose..." && \
 	mkdir -p /openpose/build && \
 	cd /openpose/build && \
 	cmake .. && \
-	make -j`nproc`
+	make all && \
+	make install
 
 WORKDIR /openpose
